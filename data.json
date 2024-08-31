@@ -1,0 +1,32 @@
+[
+    {
+        "Personal Information": {
+            "Date of Birth": "19-11-1997",
+            "Birth Time": "1.38 pm",
+            "Birth Place": "Proddatur",
+            "Star": "Punarvasu",
+            "Padam": "4th Paadam",
+            "Raasi": "Karkataka (Cancer)",
+            "Gothram": "Brahmakula",
+            "Uncle Gothram": "Enakala",
+            "Height": "5-3",
+            "Complexion": "Wheatish",
+            "Marital Status": "Unmarried"
+        },
+        "Educational & Professional Information": {
+            "Education Category": "Bachelors - Engineering/ Computers",
+            "Education in Detail": "ECE",
+            "Employed in": "Business",
+            "Occupation": "Others",
+            "Occupation in detail": "Online Business( kalak saree website) past worked in Robert Bosch company",
+            "Annual Income": "India - Rs Just now started",
+            "Siblings": "Brothers: 1, Brothers Married: 0\n\t\t\t\t\t\t\t\t\t\tSisters: 0, Sisters Married: 0"
+        },
+        "images": [
+            "https://harismatrimony.com/img/6796f086683e5eb7a7fe043b4a47bb6a.jpg",
+            "https://harismatrimony.com/img/eca66194af1388aac0a157cb5972d887.jpg",
+            "https://harismatrimony.com/img/1ec230d1b97ba87db6cc7e39446b67aa.jpg"
+        ],
+        "id": "7911"
+    }
+]
