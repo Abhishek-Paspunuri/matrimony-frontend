@@ -16,6 +16,7 @@ const FooterButtons = (props: FooterProps) => {
         else {
             currentProfileIndex > 0 ? setCurrentProfileIndex(prev => prev - 1) : setCurrentProfileIndex(0);
         }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
     return (
         <div className='flex justify-center '>
