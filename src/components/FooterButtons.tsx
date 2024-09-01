@@ -1,4 +1,5 @@
 import React from "react"
+import { GrFormPreviousLink , GrFormNextLink} from "react-icons/gr";
 
 interface FooterProps {
     profileCount: number,
@@ -20,18 +21,18 @@ const FooterButtons = (props: FooterProps) => {
         <div className='flex justify-center '>
             <div className='w-[70%] h-[2rem] flex justify-end'>
                 <button 
-                    className='bg-purple-800 text-white p-1 w-[5rem] rounded-lg mx-2 hover:bg-purple-500 disabled:opacity-50 hover:cursor-pointer disabled:cursor-not-allowed' 
+                    className='bg-purple-800 text-white p-1 w-[5rem] rounded-lg mx-2 hover:bg-purple-500 disabled:opacity-50 hover:cursor-pointer disabled:cursor-not-allowed text-2xl flex justify-center' 
                     onClick={() => handlePageAction('prev')} 
                     disabled={currentProfileIndex === 0}
                 >
-                    Prev
+                    <GrFormPreviousLink />
                 </button>
                 <button 
-                    className='bg-purple-800 text-white p-1 w-[5rem] rounded-lg mx-2 hover:bg-purple-500 disabled:opacity-50 hover:cursor-pointer disabled:cursor-not-allowed' 
+                    className='bg-purple-800 text-white p-1 w-[5rem] rounded-lg mx-2 hover:bg-purple-500 disabled:opacity-50 hover:cursor-pointer disabled:cursor-not-allowed text-2xl flex justify-center' 
                     onClick={() => handlePageAction('next')}
                     disabled={currentProfileIndex === profileCount - 1}
                 >
-                    Next
+                        <GrFormNextLink />
                 </button>
             </div>
         </div>

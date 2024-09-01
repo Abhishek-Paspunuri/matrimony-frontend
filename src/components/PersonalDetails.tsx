@@ -9,9 +9,9 @@ interface personalDetailsProps {
 const PersonalDetails = (props: personalDetailsProps) => {
     const { personalInformation, educationAndProfessionInformation, kundaliInformation } = props;
     return (
-        <div className='flex justify-center w-full'>
-            <div className='w-[70%]'>
-                <div className='w-full py-3 h-auto flex justify-between'>
+        <div className='flex justify-center flex-col md:flex-row'>
+            <div className='w-full md:w-[70%]'>
+                <div className='w-full py-3 h-auto flex justify-between flex-col md:flex-row'>
                     <Card
                         title="Personal Information"
                         data={personalInformation}

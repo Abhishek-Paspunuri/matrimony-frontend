@@ -6,7 +6,7 @@ interface CardProps {
 const Card = (props: CardProps) => {
     const { title, data } = props;
     return (
-        <div className="w-[48%]">
+        <div className="pb-3 md:w-[48%]">
             <div className='border bg-purple-500 rounded-lg shadow-md text-white'>
                 <div className='p-2'>
                     <p>{title}</p>
