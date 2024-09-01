@@ -11,7 +11,7 @@ const PersonalDetails = (props: personalDetailsProps) => {
     return (
         <div className='flex justify-center flex-col md:flex-row'>
             <div className='w-full md:w-[70%]'>
-                <div className='w-full py-3 h-auto flex justify-between flex-col md:flex-row'>
+                <div className='w-full pt-3 h-auto flex justify-between flex-col md:flex-row'>
                     <Card
                         title="Personal Information"
                         data={personalInformation}
@@ -21,7 +21,7 @@ const PersonalDetails = (props: personalDetailsProps) => {
                         data={educationAndProfessionInformation}
                     />
                 </div>
-                <div className='w-[100%] py-3 flex justify-between'>
+                <div className='w-[100%] flex justify-between'>
                     {
                         kundaliInformation && Object.keys(kundaliInformation).length > 0 &&
                         <Card
