@@ -1,4 +1,3 @@
-import React from 'react'
 import Card from './Card'
 
 interface personalDetailsProps {
@@ -10,9 +9,9 @@ interface personalDetailsProps {
 const PersonalDetails = (props: personalDetailsProps) => {
     const { personalInformation, educationAndProfessionInformation, kundaliInformation } = props;
     return (
-        <div className='flex justify-center'>
+        <div className='flex justify-center w-full'>
             <div className='w-[70%]'>
-                <div className='w-full py-3 flex justify-between'>
+                <div className='w-full py-3 h-auto flex justify-between'>
                     <Card
                         title="Personal Information"
                         data={personalInformation}

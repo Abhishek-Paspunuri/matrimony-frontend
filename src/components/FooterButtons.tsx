@@ -19,22 +19,20 @@ const FooterButtons = (props: FooterProps) => {
     return (
         <div className='flex justify-center '>
             <div className='w-[70%] h-[2rem] flex justify-end'>
-                <div className='w-[20%]'>
-                    <button 
-                        className='bg-purple-800 text-white p-1 w-[5rem] rounded-lg mx-2 hover:bg-purple-500 disabled:opacity-50 hover:cursor-pointer disabled:cursor-not-allowed' 
-                        onClick={() => handlePageAction('prev')} 
-                        disabled={currentProfileIndex === 0}
-                    >
-                        Prev
-                    </button>
-                    <button 
-                        className='bg-purple-800 text-white p-1 w-[5rem] rounded-lg mx-2 hover:bg-purple-500 disabled:opacity-50 hover:cursor-pointer disabled:cursor-not-allowed' 
-                        onClick={() => handlePageAction('next')}
-                        disabled={currentProfileIndex === profileCount - 1}
-                    >
-                        Next
-                    </button>
-                </div>
+                <button 
+                    className='bg-purple-800 text-white p-1 w-[5rem] rounded-lg mx-2 hover:bg-purple-500 disabled:opacity-50 hover:cursor-pointer disabled:cursor-not-allowed' 
+                    onClick={() => handlePageAction('prev')} 
+                    disabled={currentProfileIndex === 0}
+                >
+                    Prev
+                </button>
+                <button 
+                    className='bg-purple-800 text-white p-1 w-[5rem] rounded-lg mx-2 hover:bg-purple-500 disabled:opacity-50 hover:cursor-pointer disabled:cursor-not-allowed' 
+                    onClick={() => handlePageAction('next')}
+                    disabled={currentProfileIndex === profileCount - 1}
+                >
+                    Next
+                </button>
             </div>
         </div>
     )

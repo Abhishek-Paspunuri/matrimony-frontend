@@ -4,9 +4,17 @@ import PersonalDetails from './PersonalDetails'
 import FooterButtons from './FooterButtons'
 import { BeatLoader } from 'react-spinners'
 
+interface UserProfile {
+    "Personal Information": any;
+    "Educational & Professional Information": any;
+    "Kundali Information"?: { [key: string]: any };
+    images: string[];
+    id: string; 
+}
+
 const Home = () => {
     const [currentProfileIndex, setCurrentProfileIndex] = useState(0)
-    const [profileData, setProfileData] = useState([])
+    const [profileData, setProfileData] = useState<UserProfile[]>()
     const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
@@ -29,30 +37,31 @@ const Home = () => {
         </div>
     }
 
+   if (isLoading) {
+        return <BeatLoader />;
+    }
+
+    if (!profileData || profileData.length === 0) {
+        return <h1>No profiles available</h1>;
+    }
+
+    const currentProfile = profileData[currentProfileIndex];
+
     return (
-        <>
-            {
-                profileData.length === 0 &&
-                <div className='pb-4'>
-                    <Corousel images={profileData[currentProfileIndex]['images']} />
-                    <PersonalDetails
-                        personalInformation={profileData[currentProfileIndex]['Personal Information']}
-                        educationAndProfessionInformation={profileData[currentProfileIndex]['Educational & Professional Information']}
-                        kundaliInformation={
-                            'Kundali Information' in profileData[currentProfileIndex]
-                                ? (profileData[currentProfileIndex]['Kundali Information'] as { [key: string]: any })
-                                : undefined
-                        }
-                    />
-                    <FooterButtons
-                        profileCount={profileData.length}
-                        currentProfileIndex={currentProfileIndex}
-                        setCurrentProfileIndex={setCurrentProfileIndex}
-                    />
-                </div>
-            }
-        </>
-    )
+        <div className='pb-4'>
+            <Corousel images={currentProfile.images} />
+            <PersonalDetails
+                personalInformation={currentProfile["Personal Information"]}
+                educationAndProfessionInformation={currentProfile["Educational & Professional Information"]}
+                kundaliInformation={currentProfile["Kundali Information"]}
+            />
+            <FooterButtons
+                profileCount={profileData.length}
+                currentProfileIndex={currentProfileIndex}
+                setCurrentProfileIndex={setCurrentProfileIndex}
+            />
+        </div>
+    );
 }
 
 export default Home
