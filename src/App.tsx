@@ -1,7 +1,6 @@
 import './App.css'
 import '../src/index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import Home from './components/Home';
 import Layout from './components/Layout';
 
 function App() {
@@ -11,12 +10,6 @@ function App() {
       path: '/',
       element: <Layout />,
       errorElement: <div>Page Not Found</div>,
-      children: [
-        {
-          path: '/home',
-          element: <Home />
-        },
-      ]
     },
   ]);
 
