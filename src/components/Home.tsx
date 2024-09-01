@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import Corousel from './Corousel'
 import PersonalDetails from './PersonalDetails'
 import FooterButtons from './FooterButtons'
